@@ -1,0 +1,86 @@
+/* General container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 430px;
+    width: 100%;
+    margin: 1em;
+}
+
+h1 {
+  font-size: 30px;
+  color: #000; 
+  font-family: "Orbitron-Bold";
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.form-floating {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-floating label {
+  color: #000; 
+}
+
+.form-floating .form-control {
+  border: 1px solid #ccc; 
+  background-color: #fff; 
+}
+
+.form-floating .form-control:focus {
+  border-color: #000; 
+  box-shadow: none; 
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #000; 
+  border: none;
+  color: #fff; 
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #333; 
+}
+
+.links-group {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .form-container {
+    padding: 15px;
+    box-shadow: none; 
+  }
+}

@@ -12,11 +12,13 @@ import { ShowEventsComponent } from './pages/private/show-events/show-events.com
 import { EventsComponent } from './pages/public/events/events.component';
 import { UpdateLocationComponent } from './pages/private/update-location/update-location.component';
 import { UpdateEventsComponent } from './pages/private/update-events/update-events.component';
+import { LoginComponent } from './pages/public/login/login.component';
+import { RegisterComponent } from './pages/public/register/register.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  {path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: 'home', component: HomeComponent },
   {path:'register-product', component: NewProductComponent},
   {path: 'show-products', component: ShowProductsComponent},
   {path: 'products', component: ProductsComponent},
@@ -27,7 +29,9 @@ const routes: Routes = [
   {path: 'show-events', component: ShowEventsComponent},
   {path: 'events', component: EventsComponent},
   {path: 'update-location/:id', component: UpdateLocationComponent},
-  {path: 'update-event/:id', component: UpdateEventsComponent}
+  {path: 'update-event/:id', component: UpdateEventsComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({

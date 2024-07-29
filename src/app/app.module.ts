@@ -22,6 +22,8 @@ import { ShowEventsComponent } from './pages/private/show-events/show-events.com
 import { EventsComponent } from './pages/public/events/events.component';
 import { UpdateLocationComponent } from './pages/private/update-location/update-location.component';
 import { UpdateEventsComponent } from './pages/private/update-events/update-events.component';
+import { LoginComponent } from './pages/public/login/login.component';
+import { RegisterComponent } from './pages/public/register/register.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { UpdateEventsComponent } from './pages/private/update-events/update-even
     ShowEventsComponent,
     EventsComponent,
     UpdateLocationComponent,
-    UpdateEventsComponent
+    UpdateEventsComponent,
+    LoginComponent,
+    RegisterComponent
 
   ],
   imports: [

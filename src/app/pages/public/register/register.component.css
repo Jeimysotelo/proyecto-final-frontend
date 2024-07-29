@@ -1,0 +1,85 @@
+/* General container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+/* Form container styling */
+.form-container {
+    background-color: #fff; /* White background */
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 430px;
+    width: 100%;
+    margin: 1em;
+}
+
+/* Title styling */
+h1 {
+  font-size: 30px;
+  color: #000; /* Black color */
+  font-family: "Orbitron-Bold";
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+/* Floating label styling */
+.form-floating {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-floating label {
+  color: #000; /* Black color for labels */
+}
+
+.form-floating .form-control {
+  border: 1px solid #ccc; /* Light grey border */
+  background-color: #fff; /* White background for input */
+}
+
+.form-floating .form-control:focus {
+  border-color: #000; /* Black border on focus */
+  box-shadow: none; /* Remove shadow on focus */
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #000; /* Black background */
+  border: none;
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Full width */
+}
+
+.btn-primary:hover {
+  background-color: #333; /* Darker black for hover effect */
+}
+
+/* Links styling */
+.links-group {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.link {
+  color: #000; /* Black color for links */
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .form-container {
+    padding: 15px;
+    box-shadow: none; /* Remove shadow on small screens */
+  }
+}
