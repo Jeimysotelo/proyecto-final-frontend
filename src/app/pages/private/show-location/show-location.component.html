@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let location of locations.data">
+        <td>{{ location.nombre }}</td>
+        <td>
+          <img [src]="location.urlImagen" [alt]="location.name" class="product-image">
+        </td>
+        <td>
+            <div class="bott">
+                <button class="btn btn-primary"  [routerLink]="['/update-locations', location._id]" >Edit</button>
+                <button class="btn btn-primary" (click)="onDelete(location._id)">Delete</button>
+            </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,71 @@
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: .5em;
+}
+
+h5 {
+    font-family: 'Orbitron-Bold';
+    font-weight: bolder; 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    font-family: 'Orbitron-Bold';
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+.card-img-top {
+    max-height: 240px;
+    object-fit: cover;
+    width: 13em;
+    margin: 0 auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1rem;
+}
+
+.card-title {
+    margin-top: 0;
+}
+
+.card-text {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+a.btn.btn-primary {
+    margin-top: auto; /* Ensures the button is pushed to the bottom */
+    width: 100%;
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: .5em;
+    /* text-transform: uppercase; */
+    transition: background-color 0.3s ease;
+}
+
+a.btn.btn-primary:hover {
+    background-color: #333;
+}

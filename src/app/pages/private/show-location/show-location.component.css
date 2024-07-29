@@ -1,0 +1,44 @@
+/* Estilos de la tabla */
+.table {
+    width: 80%;
+    margin: 1em auto;
+    font-size: 16px;
+    color: #333;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Estilos para las imágenes */
+.product-image {
+    max-width: 150px; /* Ajusta el tamaño según tus necesidades */
+    max-height: 150px; /* Ajusta el tamaño según tus necesidades */
+    object-fit: cover; /* Asegura que la imagen mantenga su aspecto */
+    border-radius: 5px;
+}
+
+.bott {
+    display: flex;
+    gap: 13px;
+    justify-content: center;
+}
+
+button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+}
+
+button:hover {
+    background-color: #2b2828;
+    border: none;
+}

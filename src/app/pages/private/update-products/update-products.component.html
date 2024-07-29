@@ -1,0 +1,60 @@
+<div class="container">
+    <h2>Update Product</h2>
+    <form class="row g-3 needs-validation" [formGroup]="updateProduct" (ngSubmit)="onSubmit()">
+        <div class="col-md-4">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="name" formControlName="name" required [ngModel]="oneProduct.name">
+          <div class="error">
+            <div *ngIf="updateProduct.get('name')?.invalid && updateProduct.get('name')?.touched">
+                <div *ngIf="updateProduct.get('name')?.errors?.['required']"><small>Name is required.</small></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="urlImagen" class="form-label">Image URL:</label>
+          <input type="text" class="form-control" id="urlImagen" formControlName="urlImagen" required [ngModel]="oneProduct.urlImagen">
+          <div class="error">
+            <div *ngIf="updateProduct.get('urlImagen')?.invalid && updateProduct.get('urlImagen')?.touched">
+                <div *ngIf="updateProduct.get('urlImagen')?.errors?.['required']"><small>Image URL is required.</small></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="quantity" class="form-label">Quantity:</label>
+          <input type="text" class="form-control" id="quantity" formControlName="quantity" required [ngModel]="oneProduct.quantity">
+          <div class="error">
+            <div *ngIf="updateProduct.get('quantity')?.invalid && updateProduct.get('quantity')?.touched">
+                <div *ngIf="updateProduct.get('quantity')?.errors?.['required']"><small>Quantity is required.</small></div>
+                <div *ngIf="updateProduct.get('quantity')?.errors?.['pattern']"><small>Quantity must be a number.</small></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="description" class="form-label">Description:</label>
+          <input type="text" class="form-control" id="description" formControlName="description" required [ngModel]="oneProduct.description">
+          <div class="error">
+            <div *ngIf="updateProduct.get('description')?.invalid && updateProduct.get('description')?.touched">
+                <div *ngIf="updateProduct.get('description')?.errors?.['required']"><small>Description is required.</small></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="price" class="form-label">Price:</label>
+          <input type="text" class="form-control" id="price" formControlName="price" required [ngModel]="oneProduct.price">
+          <div class="error">
+            <div *ngIf="updateProduct.get('price')?.invalid && updateProduct.get('price')?.touched">
+                <div *ngIf="updateProduct.get('price')?.errors?.['required']"><small>Price is required.</small></div>
+                <div *ngIf="updateProduct.get('price')?.errors?.['pattern']"><small>Price must be a number.</small></div>
+              </div>
+          </div>
+        </div>
+        
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Update</button>
+        </div>
+      </form> 
+</div>

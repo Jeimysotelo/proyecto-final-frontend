@@ -1,0 +1,60 @@
+<div class="container">
+    <h2>Register Product</h2>
+    <form class="row g-3 needs-validation" [formGroup]="newProduct" (ngSubmit)="onSumbit()">
+        <div class="col-md-4">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="name" formControlName="name" required>
+          <div class="error">
+            <div *ngIf="newProduct.get('name')?.invalid && newProduct.get('name')?.touched">
+                <div *ngIf="newProduct.get('name')?.errors?.['required']"><small>Name is required.</small></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="urlImagen" class="form-label">Image URL:</label>
+          <input type="text" class="form-control" id="urlImagen" formControlName="urlImagen" required>
+          <div class="error">
+            <div *ngIf="newProduct.get('urlImagen')?.invalid && newProduct.get('urlImagen')?.touched">
+                <div *ngIf="newProduct.get('urlImagen')?.errors?.['required']"><small>Image URL is required.</small></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="quantity" class="form-label">Quantity:</label>
+          <input type="text" class="form-control" id="quantity" formControlName="quantity" required>
+          <div class="error">
+            <div *ngIf="newProduct.get('quantity')?.invalid && newProduct.get('quantity')?.touched">
+                <div *ngIf="newProduct.get('quantity')?.errors?.['required']"><small>Quantity is required.</small></div>
+                <div *ngIf="newProduct.get('quantity')?.errors?.['pattern']"><small>Quantity must be a number.</small></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="description" class="form-label">Description:</label>
+          <input type="text" class="form-control" id="description" formControlName="description" required>
+          <div class="error">
+            <div *ngIf="newProduct.get('description')?.invalid && newProduct.get('description')?.touched">
+                <div *ngIf="newProduct.get('description')?.errors?.['required']"><small>Description is required.</small></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="price" class="form-label">Price:</label>
+          <input type="text" class="form-control" id="price" formControlName="price" required>
+          <div class="error">
+            <div *ngIf="newProduct.get('price')?.invalid && newProduct.get('price')?.touched">
+                <div *ngIf="newProduct.get('price')?.errors?.['required']"><small>Price is required.</small></div>
+                <div *ngIf="newProduct.get('price')?.errors?.['pattern']"><small>Price must be a number.</small></div>
+              </div>
+          </div>
+        </div>
+        
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Register</button>
+        </div>
+      </form> 
+</div>

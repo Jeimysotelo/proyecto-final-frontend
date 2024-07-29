@@ -1,0 +1,113 @@
+
+.container {
+    max-width: 550px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: "Orbitron-bold";
+}
+
+h2 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-md-4, .col-md-3 {
+    width: 100%;
+    max-width: 400px; 
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #000;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animaciones y efectos 3D */
+input[type="text"]:focus {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+label {
+    transform: translateZ(0);
+    transition: transform 0.3s ease;
+}
+
+label:hover {
+    transform: translateZ(10px);
+    transition: transform 0.3s ease;
+}
+
+.col-12 {
+    text-align: center;
+}
+
+.error {
+    color: red;
+    height: .5em;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:active {
+    transform: translateY(2px);
+    transition: transform 0.3s ease;
+}
+
+/* Efectos 3D en el botón */
+button[type="submit"] {
+    perspective: 1000px;
+}
+
+button[type="submit"]:hover {
+    transform: rotateY(10deg);
+    transition: transform 0.3s ease;
+}
+
+button[type="submit"]:active {
+    transform: rotateY(20deg);
+    transition: transform 0.3s ease;
+}

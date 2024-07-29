@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>New Location</h2>
+    <form class="row g-3 needs-validation" [formGroup]="newLocation" (ngSubmit)="onSumbit()">
+        <div class="col-md-4">
+          <label for="nombre" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="name" formControlName="nombre" required>
+          <div class="error">
+            <div *ngIf="newLocation.get('nombre')?.invalid && newLocation.get('nombre')?.touched">
+                <div *ngIf="newLocation.get('nombre')?.errors?.['required']"><small>Name is required.</small></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="urlImagen" class="form-label">Image URL:</label>
+          <input type="text" class="form-control" id="urlImagen" formControlName="urlImagen" required>
+          <div class="error">
+            <div *ngIf="newLocation.get('urlImagen')?.invalid && newLocation.get('urlImagen')?.touched">
+                <div *ngIf="newLocation.get('urlImagen')?.errors?.['required']"><small>Image URL is required.</small></div>
+              </div>
+          </div>
+        </div> 
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Register Location</button>
+        </div>
+      </form> 
+</div>

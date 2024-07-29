@@ -1,0 +1,12 @@
+<div class="card-deck">
+  <div class="card" style="width: 18rem;" *ngFor="let product of products.data">
+    <img [src]="product.urlImagen" class="card-img-top" [alt]="product.name">
+    <div class="card-body">
+      <h5 class="card-title">{{ product.name }}</h5>
+
+      <p class="card-text">{{ product.description}}</p>
+      <p class="card-text fs-5"><strong>$ {{ product.price}}</strong></p>
+      <a href="#" class="btn btn-primary">Comprar</a>
+    </div>
+  </div>
+</div>

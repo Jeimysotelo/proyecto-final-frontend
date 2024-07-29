@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products.data">
+        <td>{{ product.name }}</td>
+        <td>
+          <img [src]="product.urlImagen" [alt]="product.name" class="product-image">
+        </td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>
+            <div class="bott">
+                <button class="btn btn-primary"  [routerLink]="['/update-products', product._id]" >Edit</button>
+                <button class="btn btn-primary" (click)="onDelete(product._id)">Delete</button>
+            </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
