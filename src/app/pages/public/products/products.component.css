@@ -1,3 +1,22 @@
+h2 {
+    text-align: center;
+    margin: 0.5em;
+    font-family: "Orbitron-Bold";
+    font-weight: 900;
+    font-size: 2em;
+    color: #000000; 
+    text-shadow: 0 0 8px #33ffcc, 0 0 15px #33ffcc, 0 0 25px #33ffcc, 0 0 30px #33ffcc;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+h2:hover {
+    transform: scale(1.01); 
+    color: #000000;
+    text-shadow: 0 0 15px #66ffff, 0 0 25px #66ffff, 0 0 30px #66ffff, 0 0 40px #66ffff; /* Enhanced glow */
+}
 
 .card-deck {
     display: flex;

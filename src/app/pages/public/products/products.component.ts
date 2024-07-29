@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProductsService } from '../../../services/products.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { ProductsService } from '../../../services/products.service';
 })
 export class ProductsComponent {
   products: any; 
+
+  @Input() showProducts: boolean = true;
 
   constructor(private productService: ProductsService){
 

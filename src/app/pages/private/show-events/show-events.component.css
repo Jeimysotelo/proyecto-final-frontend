@@ -1,0 +1,60 @@
+h2 {
+    text-align: center;
+    margin-top: 0.5em;
+    font-family: "Orbitron-Bold";
+    font-weight: 900;
+    font-size: 2em;
+    color: #000000; 
+    text-shadow: 0 0 8px #33ffcc, 0 0 15px #33ffcc, 0 0 25px #33ffcc, 0 0 30px #33ffcc;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+h2:hover {
+    transform: scale(1.01); 
+    color: #000000;
+    text-shadow: 0 0 15px #66ffff, 0 0 25px #66ffff, 0 0 30px #66ffff, 0 0 40px #66ffff; /* Enhanced glow */
+}
+
+.card {
+  margin: 1em; /* Espacio entre tarjetas */
+}
+
+.event-image {
+  height: 250px; /* Ajusta la altura de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio de la tarjeta */
+}
+
+.card-deck {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card-title {
+  font-size: 1.25rem; /* Tamaño de fuente para el título */
+  font-weight: bold; /* Negrita para el título */
+}
+
+.card-text {
+  margin-bottom: 10px; /* Espacio inferior entre elementos de texto */
+}
+
+.bott {
+    display: flex;
+    gap: 13px;
+}
+
+button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: .5em 2em;
+}
+
+button:hover {
+    background-color: #2b2828;
+    border: none;
+}

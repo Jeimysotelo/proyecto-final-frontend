@@ -1,0 +1,20 @@
+<h2>Eventos Destacados</h2>
+
+<div class="card-deck">
+    <div class="card" *ngFor="let event of events.data" style="width: 25rem;">
+      <img [src]="event.urlImagen" [alt]="event.name" class="card-img-top event-image">
+      <div class="card-body">
+        <h5 class="card-title">{{ event.name }}</h5>
+        <p class="card-text">{{ event.description }}</p>
+        <p class="card-text"><strong>Price:</strong> {{ event.price }}</p>
+        <p class="card-text"><strong>Initial Date:</strong> {{ event.initialDate | date:'mediumDate' }}</p>
+        <p class="card-text"><strong>Final Date:</strong> {{ event.finalDate | date:'mediumDate' }}</p>
+        <div class="bott">
+          <button *ngIf="showAdmin" class="btn btn-primary me-2" [routerLink]="['/update-products', event._id]">Edit</button>
+          <button *ngIf="showAdmin" class="btn btn-danger" (click)="onDelete(event._id)" >Delete</button>
+          <button *ngIf="showInscription" class="btn btn-success" (click)="inscripcion()" >Incribirme</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

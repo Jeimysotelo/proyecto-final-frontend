@@ -17,6 +17,9 @@ import { ProductsComponent } from './pages/public/products/products.component';
 import { UpdateProductsComponent } from './pages/private/update-products/update-products.component';
 import { NewLocationComponent } from './pages/private/new-location/new-location.component';
 import { ShowLocationComponent } from './pages/private/show-location/show-location.component';
+import { NewEventComponent } from './pages/private/new-event/new-event.component';
+import { ShowEventsComponent } from './pages/private/show-events/show-events.component';
+import { EventsComponent } from './pages/public/events/events.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { ShowLocationComponent } from './pages/private/show-location/show-locati
     ProductsComponent,
     UpdateProductsComponent,
     NewLocationComponent,
-    ShowLocationComponent
+    ShowLocationComponent,
+    NewEventComponent,
+    ShowEventsComponent,
+    EventsComponent
 
   ],
   imports: [

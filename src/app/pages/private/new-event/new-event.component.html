@@ -1,0 +1,70 @@
+<div class="container">
+    <h2>New Event</h2>
+    <form class="row g-3 needs-validation" [formGroup]="newEvent" (ngSubmit)="onSumbit()">
+        <div class="col-md-4">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="name" formControlName="name" required>
+          <div class="error">
+            <div *ngIf="newEvent.get('name')?.invalid && newEvent.get('name')?.touched">
+                <div *ngIf="newEvent.get('name')?.errors?.['required']"><small>Name is required.</small></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="description" class="form-label">Description:</label>
+            <input type="text" class="form-control" id="description" formControlName="description" required>
+            <div class="error">
+              <div *ngIf="newEvent.get('description')?.invalid && newEvent.get('description')?.touched">
+                  <div *ngIf="newEvent.get('description')?.errors?.['required']"><small>Description is required.</small></div>
+                </div>
+            </div>
+          </div>
+  
+          <div class="col-md-3">
+            <label for="price" class="form-label">Price:</label>
+            <input type="text" class="form-control" id="price" formControlName="price" required>
+            <div class="error">
+              <div *ngIf="newEvent.get('price')?.invalid && newEvent.get('price')?.touched">
+                  <div *ngIf="newEvent.get('price')?.errors?.['required']"><small>Price is required.</small></div>
+                  <div *ngIf="newEvent.get('price')?.errors?.['pattern']"><small>Price must be a number.</small></div>
+                </div>
+            </div>
+          </div>
+
+        <div class="col-md-4">
+          <label for="initialDate" class="form-label">Initial Date:</label>
+          <input type="date" class="form-control" id="initialDate" formControlName="initialDate" required>
+          <div class="error">
+            <div *ngIf="newEvent.get('initialDate')?.invalid && newEvent.get('initialDate')?.touched">
+                <div *ngIf="newEvent.get('initialDate')?.errors?.['required']"><small>Initial Date is required.</small></div>
+              </div>
+          </div>
+        </div> 
+
+        <div class="col-md-4">
+            <label for="finalDate" class="form-label">Final Date:</label>
+            <input type="date" class="form-control" id="finalDate" formControlName="finalDate" required>
+            <div class="error">
+              <div *ngIf="newEvent.get('finalDate')?.invalid && newEvent.get('finalDate')?.touched">
+                  <div *ngIf="newEvent.get('finalDate')?.errors?.['required']"><small>Final Date is required.</small></div>
+                </div>
+            </div>
+          </div> 
+
+        <div class="col-md-4">
+            <label for="urlImagen" class="form-label">Image URL:</label>
+            <input type="text" class="form-control" id="urlImagen" formControlName="urlImagen" required>
+            <div class="error">
+              <div *ngIf="newEvent.get('urlImagen')?.invalid && newEvent.get('urlImagen')?.touched">
+                  <div *ngIf="newEvent.get('urlImagen')?.errors?.['required']"><small>Image URL is required.</small></div>
+                </div>
+            </div>
+          </div> 
+
+
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit" [disabled]="newEvent.invalid">Register event</button>
+        </div>
+      </form> 
+</div>
