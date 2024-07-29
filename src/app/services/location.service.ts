@@ -21,4 +21,12 @@ export class LocationService {
   deleteLocationById(id: any){
     return this.http.delete(`${this.BASE_URL}/localidades/${id}`)
   }
+  
+  updateLocation(id: string, location: any){
+    return this.http.patch<any>(`${this.BASE_URL}/localidades/${id}`, location);
+  }
+
+  getLocationById(id: string) {
+    return this.http.get<any>(`${this.BASE_URL}/localidades/${id}`);
+  }
 }

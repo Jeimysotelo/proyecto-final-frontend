@@ -20,6 +20,8 @@ import { ShowLocationComponent } from './pages/private/show-location/show-locati
 import { NewEventComponent } from './pages/private/new-event/new-event.component';
 import { ShowEventsComponent } from './pages/private/show-events/show-events.component';
 import { EventsComponent } from './pages/public/events/events.component';
+import { UpdateLocationComponent } from './pages/private/update-location/update-location.component';
+import { UpdateEventsComponent } from './pages/private/update-events/update-events.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { EventsComponent } from './pages/public/events/events.component';
     ShowLocationComponent,
     NewEventComponent,
     ShowEventsComponent,
-    EventsComponent
+    EventsComponent,
+    UpdateLocationComponent,
+    UpdateEventsComponent
 
   ],
   imports: [

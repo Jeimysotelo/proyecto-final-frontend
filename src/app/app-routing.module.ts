@@ -10,6 +10,8 @@ import { ShowLocationComponent } from './pages/private/show-location/show-locati
 import { NewEventComponent } from './pages/private/new-event/new-event.component';
 import { ShowEventsComponent } from './pages/private/show-events/show-events.component';
 import { EventsComponent } from './pages/public/events/events.component';
+import { UpdateLocationComponent } from './pages/private/update-location/update-location.component';
+import { UpdateEventsComponent } from './pages/private/update-events/update-events.component';
 
 
 const routes: Routes = [
@@ -23,7 +25,9 @@ const routes: Routes = [
   {path:'show-location', component:ShowLocationComponent},
   {path:'new-event', component:NewEventComponent},
   {path: 'show-events', component: ShowEventsComponent},
-  {path: 'events', component: EventsComponent}
+  {path: 'events', component: EventsComponent},
+  {path: 'update-location/:id', component: UpdateLocationComponent},
+  {path: 'update-event/:id', component: UpdateEventsComponent}
 ];
 
 @NgModule({

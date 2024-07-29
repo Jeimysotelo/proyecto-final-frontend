@@ -22,4 +22,13 @@ export class EventsService {
   deleteEvent(id: any){
     return this.http.delete(`${this.BASE_URL}/eventos/${id}`)
   }
+
+  updateEvent(id: string, event: any){
+    return this.http.patch<any>(`${this.BASE_URL}/eventos/${id}`, event);
+  }
+
+  getEventById(id: string) {
+    return this.http.get<any>(`${this.BASE_URL}/eventos/${id}`);
+  }
+
 }

@@ -10,7 +10,7 @@
         <p class="card-text"><strong>Initial Date:</strong> {{ event.initialDate | date:'mediumDate' }}</p>
         <p class="card-text"><strong>Final Date:</strong> {{ event.finalDate | date:'mediumDate' }}</p>
         <div class="bott">
-          <button *ngIf="showAdmin" class="btn btn-primary me-2" [routerLink]="['/update-products', event._id]">Edit</button>
+          <button *ngIf="showAdmin" class="btn btn-primary me-2" [routerLink]="['/update-event', event._id]">Edit</button>
           <button *ngIf="showAdmin" class="btn btn-danger" (click)="onDelete(event._id)" >Delete</button>
           <button *ngIf="showInscription" class="btn btn-success" (click)="inscripcion()" >Incribirme</button>
         </div>
