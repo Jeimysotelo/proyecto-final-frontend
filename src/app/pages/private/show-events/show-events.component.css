@@ -58,3 +58,7 @@ button:hover {
     background-color: #2b2828;
     border: none;
 }
+
+.btn-success{
+    width: 100%;
+}

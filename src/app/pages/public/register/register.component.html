@@ -1,33 +1,47 @@
 <div class="container">
     <div class="form-container">
       <h1 class="text-center">Register for BattleSteels</h1>
-      <form>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingName" formControlName="name" placeholder="Your Name">
+          <input type="text" class="form-control" id="floatingName" formControlName="username" placeholder="Your Name">
           <label for="floatingName">Name</label>
+          <div *ngIf="registerForm.get('username')?.invalid && registerForm.get('username')?.touched">
+            <small class="text-danger">Name is required</small>
+          </div>
         </div>
   
         <div class="form-floating mb-3">
           <input type="email" class="form-control" id="floatingEmail" formControlName="email" placeholder="name@example.com">
           <label for="floatingEmail">Email address</label>
+          <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+            <small class="text-danger">Valid email is required</small>
+          </div>
         </div>
   
         <div class="form-floating mb-3">
           <input type="password" class="form-control" id="floatingPassword" formControlName="password" placeholder="Password">
           <label for="floatingPassword">Password</label>
+          <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+            <small class="text-danger">Password is required</small>
+          </div>
         </div>
   
         <div class="form-floating mb-3">
           <input type="password" class="form-control" id="floatingConfirmPassword" formControlName="confirmPassword" placeholder="Confirm Password">
           <label for="floatingConfirmPassword">Confirm Password</label>
+          <div *ngIf="registerForm.errors?.['mismatch'] && (registerForm.get('confirmPassword')?.touched || registerForm.get('password')?.touched)">
+            <small class="text-danger">Passwords do not match</small>
+          </div>
         </div>
   
+        <input type="hidden" formControlName="role">
+  
         <div class="form-group">
-          <button type="submit" class="btn btn-primary">Register</button>
+          <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Register</button>
         </div>
   
         <div class="links-group">
-          <span>Already have an account? <a href="/login" class="link">Login here</a></span>
+          <span>Already have an account? <a routerLink="/login" class="link">Login here</a></span>
         </div>
       </form>
     </div>
