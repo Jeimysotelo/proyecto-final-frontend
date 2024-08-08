@@ -50,3 +50,18 @@
         text-shadow: 0 0 20px #66ffff, 0 0 30px #66ffff, 0 0 40px #66ffff;
     }
 }
+
+@media (max-width: 768px) {
+    .video-overlay h1 {
+        font-size: 2.5em; 
+    }
+  }
+
+
+  @media (max-width: 368px) {
+    .video-overlay h1 {
+        font-size: 1.5em; 
+    }
+  }
+  
+  

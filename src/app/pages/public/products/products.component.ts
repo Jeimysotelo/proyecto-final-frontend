@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ProductsService } from '../../../services/products.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-products',
@@ -20,6 +21,14 @@ export class ProductsComponent {
       this.products = data
       console.log(this.products.data)
 
+    })
+  }
+
+  comprado(){
+    Swal.fire({
+      title:'Producto Comprado exitosamente',
+      icon: 'success',
+      timer:2000
     })
   }
 }
