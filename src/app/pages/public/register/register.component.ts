@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsersService } from '../../../services/users.service';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ import Swal from 'sweetalert2';
 export class RegisterComponent {
   registerForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private userService: UsersService) { }
+  constructor(private fb: FormBuilder, private userService: UsersService, private router:Router) { }
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -44,7 +45,7 @@ export class RegisterComponent {
           }).then(() => {
             this.registerForm.reset()
             // Puedes redirigir a otra página si lo deseas
-            // this.router.navigate(['/login']);
+            this.router.navigate(['/login']);
           });
         },
         error => {
