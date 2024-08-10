@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EventsService {
 
-  BASE_URL: String = environment.baseUrl
+  BASE_URL: String = environment.baseUrl 
 
   constructor( private http: HttpClient) { }
 
