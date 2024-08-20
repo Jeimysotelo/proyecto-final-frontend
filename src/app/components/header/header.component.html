@@ -36,9 +36,18 @@
           </ul>
         </li>
       </ul>
-      <div class="d-flex m-2">
-        <a *ngIf="!isAuthenticated" class="btn btn-outline-success" aria-current="page" routerLink="/login">Login</a>
-        <a *ngIf="!isAuthenticated" class="btn btn-outline-success" aria-current="page" routerLink="/register">Register</a>
+      <div class="d-flex align-items-center">
+        <!-- Nuevo elemento para el carrito de compras -->
+        <a class="btn btn-outline-primary me-2 position-relative" routerLink="/cart">
+          <i class="bi bi-cart"></i> Carrito
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{ cartItemCount$ | async }}
+            <span class="visually-hidden">items en el carrito</span>
+          </span>
+        </a>
+        <!-- Botones de autenticación existentes -->
+        <a *ngIf="!isAuthenticated" class="btn btn-outline-success me-2" aria-current="page" routerLink="/login">Login</a>
+        <a *ngIf="!isAuthenticated" class="btn btn-outline-success me-2" aria-current="page" routerLink="/register">Register</a>
         <button *ngIf="isAuthenticated" class="btn btn-outline-danger" (click)="logout()">Logout</button>
       </div>
     </div>

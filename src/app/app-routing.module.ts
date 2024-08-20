@@ -15,7 +15,7 @@ import { UpdateEventsComponent } from './pages/private/update-events/update-even
 import { LoginComponent } from './pages/public/login/login.component';
 import { RegisterComponent } from './pages/public/register/register.component';
 import { AdminGuard } from './guards/admin.guard';
-
+import { CartComponent } from './cart/cart.component'; // Asegúrate de que la ruta de importación sea correcta
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -32,12 +32,12 @@ const routes: Routes = [
   {path: 'update-location/:id', component: UpdateLocationComponent, canActivate: [AdminGuard]},
   {path: 'update-event/:id', component: UpdateEventsComponent, canActivate: [AdminGuard]},
   {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: 'cart', component: CartComponent} // Nueva ruta para el carrito
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
- }
+export class AppRoutingModule { }

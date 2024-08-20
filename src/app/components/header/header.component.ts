@@ -1,17 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import * as CartSelectors from '../../store/cart/cart.selectors';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isAuthenticated: boolean = false;
   isAdmin: boolean = false;
+  cartItemCount$: Observable<number>;
 
-  constructor(private userService: UsersService, private router: Router) { }
+  constructor(
+    private userService: UsersService, 
+    private router: Router,
+    private store: Store
+  ) {
+    this.cartItemCount$ = this.store.select(CartSelectors.selectCartItemsCount);
+  }
 
   ngOnInit(): void {
     this.checkAuthentication();
